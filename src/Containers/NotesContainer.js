@@ -11,21 +11,15 @@ class NotesContainer extends React.Component {
     ];
   };
 
-  render() {
-    console.log(this.props);
-    return (
-      <ul>
-        {this.apiResponse.map((noteObj) => (
-          <Note content={noteObj.content} />
-        ))}
-      </ul>
-    );
-  }
+  eachNote = () => {
+    return this.apiResponse().map((noteContent) => {
+      return <Note note={noteContent} />;
+    });
+  };
 
-  //   render() {
-  //     console.log(this.props);
-  //     return <div>{this.apiResponse()}</div>;
-  //   }
+  render() {
+    return <ul>{this.eachNote()}</ul>;
+  }
 }
 
 ///-------------------------------

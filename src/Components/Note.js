@@ -1,7 +1,7 @@
 import React from "react";
 
 function Note(props) {
-  //   console.log(this.props);
+  console.log(props.note);
   return <li>{props.note.content}</li>;
 }
 
