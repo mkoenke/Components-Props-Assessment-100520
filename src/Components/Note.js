@@ -1,8 +1,8 @@
-import React from 'react'
-
+import React from "react";
 
 function Note(props) {
-    return <li>{props.note.content}</li>
+  //   console.log(this.props);
+  return <li>{props.note.content}</li>;
 }
 
 export default Note;
